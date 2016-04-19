@@ -94,9 +94,37 @@ namespace BinaryTree
         public int[] GetArray()
         {
             int[] sortArray = new int[array.Length];
-            /*
-             * Has to be implemented.
-             */
+            int count = 0;
+            Node current = head;
+            do
+            {
+                if (current.left != null && !current.left.visited)
+                {
+                    current = current.left;
+
+                }
+                else
+                {
+                    if (!current.visited)
+                    {
+                        sortArray[count++] = current.data;
+
+                        current.visited = true;
+
+                    }
+                    if (current.right != null && !current.right.visited)
+                    {
+                        current = current.right;
+                    }
+                    else
+                    {
+                        current = current.parent;
+                    }
+
+                }
+
+            }
+            while (!(current == head && current.visited));
             return sortArray;
         }
     }
