@@ -14,9 +14,9 @@ namespace BinaryTree
             Tree tree = new Tree(arg);
             tree.GenTree();
             arg = tree.GetArray();
-            foreach (int i in arg)
+            for (int i = 0; i < arg.Length; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(arg[i]);
             }
 
             Console.ReadKey();
@@ -29,8 +29,6 @@ namespace BinaryTree
         public int data;
         public Node left;
         public Node right;
-        public Node parent;
-        public bool visited;
     }
 
     class Tree
@@ -55,8 +53,8 @@ namespace BinaryTree
                 n.data = array[i];
                 Add(n);
             }
-
         }
+
         public void Add(Node n)
         {
             Node current = head;
@@ -70,7 +68,6 @@ namespace BinaryTree
                     }
                     else
                     {
-                        n.parent = current;
                         current.left = n;
                         break;
                     }
@@ -83,7 +80,6 @@ namespace BinaryTree
                     }
                     else
                     {
-                        n.parent = current;
                         current.right = n;
                         break;
                     }
@@ -91,41 +87,27 @@ namespace BinaryTree
             }
         }
 
+        int[] sortArray;
+        int count;
+
         public int[] GetArray()
         {
-            int[] sortArray = new int[array.Length];
-            int count = 0;
-            Node current = head;
-            do
-            {
-                if (current.left != null && !current.left.visited)
-                {
-                    current = current.left;
-
-                }
-                else
-                {
-                    if (!current.visited)
-                    {
-                        sortArray[count++] = current.data;
-
-                        current.visited = true;
-
-                    }
-                    if (current.right != null && !current.right.visited)
-                    {
-                        current = current.right;
-                    }
-                    else
-                    {
-                        current = current.parent;
-                    }
-
-                }
-
-            }
-            while (!(current == head && current.visited));
+            sortArray = new int[array.Length];
+            count = 0;
+            DoNext(head);
             return sortArray;
+        }
+
+        public void DoNext(Node current)
+        {
+            if (current != null)
+            {
+                DoNext(current.left);
+                sortArray[count++] = current.data;
+                DoNext(current.right);
+            }
         }
     }
 }
+
+
