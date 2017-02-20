@@ -10,8 +10,8 @@ namespace Chess
     {
         static void Main(string[] args)
         {
-            Desk desk = new Desk();
-            desk.Show();
+            Game game = new Game();
+            game.Run();
             Console.ReadKey();
         }
     }
