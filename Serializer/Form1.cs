@@ -37,6 +37,7 @@ namespace Serializer
                 }
             }
         }
+
         private void PrintRawData(int[][] array)
         {
             for (int i = 0; i < array.Length; i++)
