@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsInStore", "ItemsInStor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossAndZerro", "CrossAndZerro\CrossAndZerro.csproj", "{A873FDAC-6300-44F7-8433-1B5AD51B8E14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializer", "Serializer\Serializer.csproj", "{2B786C87-8CC6-4957-87BE-121FEED22EE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,18 @@ Global
 		{A873FDAC-6300-44F7-8433-1B5AD51B8E14}.Release|x64.ActiveCfg = Release|x86
 		{A873FDAC-6300-44F7-8433-1B5AD51B8E14}.Release|x86.ActiveCfg = Release|x86
 		{A873FDAC-6300-44F7-8433-1B5AD51B8E14}.Release|x86.Build.0 = Release|x86
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|x64.Build.0 = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|x64.ActiveCfg = Release|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|x64.Build.0 = Release|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B786C87-8CC6-4957-87BE-121FEED22EE6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
